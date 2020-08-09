@@ -1,0 +1,167 @@
+<html>
+<head>
+    <style> 
+    
+    			 body{
+                margin-top: 0px; 
+                margin-bottom: 60px; 
+                margin-left: 0px; 
+                margin-right: 0px;
+            }
+            
+            #titleBox{
+                height: 90px;
+                background-color: #f2d4c4;
+                text-align: center;
+            }
+            
+            .heading{
+                font-family: Raleway;
+                font-size: 20px;
+                color: #bc7140;
+                text-align: left;
+                font-weight: 200;
+                
+                float: left;
+                margin-top: 0%;
+                margin-left: 20px;
+                font-weight: 200;
+                
+            }
+            
+            .topnav{
+                font-family: Raleway;
+                font-size: 20px;
+                color: #bc7140;
+                padding-top: 40px;
+                float: right;
+                text-decoration-color: #bc7140;
+                color:#bc7140;
+            }
+            a{
+                text-decoration-line: none;
+                text-decoration-color: #bc7140;
+                color:#bc7140;
+                padding-right: 40px;
+                float: right;
+            }
+           
+            #slogan{
+                font-family: Raleway;
+                font-size: 30px;
+                color: #bc7140;
+                text-align: center;
+                font-weight: 200;
+            }
+            
+            .table1{
+            		margin-left: 40vh;
+              
+            }
+        #table{
+              border-collapse: collapse;
+        }
+        
+        td, th{
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    
+    </style>
+</head>
+    <body>
+    <div id = "titleBox">
+                
+                <div class="topnav">
+                    <a href="Home.html">Home</a>
+				    <a href="AboutUs.html">About Us</a>
+                    <a href="Covid-19 Info.html">COVID-19</a>
+ 			        <a href="County.html">California Counties</a>
+                </div>
+                <div class = "heading">
+                    <h1>COVID-19 Website</h1> 
+                </div>
+            </div>
+            
+            <div id = "slogan">
+                <p>"Connect With Your California County Mates"</p> 
+            </div>
+<div class = "table1">Item:
+<input type="text" name="item" id="item" /><br />
+<br>
+Quantity:
+<input type="text" name="quantity" id="quantity" /><br />
+<br>
+Email:
+<input type="text" name="email" id="email" /><br />
+<br>
+School name:
+<input type="text" name="quantity" id="school_name" /><br />
+<br>
+Grade:
+<input type="text" name="quantity" id="grade" /><br />
+<br>
+<input type="button" value="Add Product +" onclick="addRow()" id="add"><br /><br />
+<table id="table" border="1">
+    <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Email</th>
+        <th>School Name</th>
+        <th>Grade</th>
+    </tr>
+    
+</table>
+        </div>
+        <script>
+        
+        function addData(data){
+        var table = document.getElementById("table");
+    
+    var row= document.createElement("tr");
+    var td1 = document.createElement("td");
+    var td2 = document.createElement("td");
+    var td3 = document.createElement("td");   
+    var td4 = document.createElement("td");
+    var td5 = document.createElement("td");
+          td1.innerHTML = data[0];
+          td2.innerHTML  = data[1];
+          td3.innerHTML  = data[2];
+          td4.innerHTML  = data[3];
+          td5.innerHTML  = data[4];
+          row.appendChild(td1);
+    row.appendChild(td2);
+    row.appendChild(td3);
+    row.appendChild(td4);
+    row.appendChild(td5);
+
+    table.children[0].appendChild(row);
+        }
+        
+
+function addRow() {
+
+var tableData = [];
+var data = [
+document.getElementById("item").value,     document.getElementById("quantity").value, document.getElementById("email").value, document.getElementById("school_name").value, document.getElementById("grade").value
+];
+addData(data);
+
+
+
+  if(typeof(Storage) !== "undefined") {
+    if (localStorage.data) {
+      localStorage.data.push(data);
+    } else {
+      localStorage.data = [];
+      tableData.push(data);
+    }
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+        </script>
+    
+    
+    </body>
+</html>

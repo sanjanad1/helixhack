@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        
+         body{
+                margin-top: 0px; 
+                margin-bottom: 0px; 
+                margin-left: 0px; 
+                margin-right: 0px;
+            }
+            
+            #titleBox{
+                height: 90px;
+                background-color: #f2d4c4;
+                text-align: center;
+            }
+            
+            .heading{
+                font-family: Raleway;
+                font-size: 20px;
+                color: #bc7140;
+                text-align: left;
+                font-weight: 200;
+                
+                float: left;
+                margin-top: 0%;
+                margin-left: 20px;
+                font-weight: 200;
+                
+            }
+            
+            .topnav{
+                font-family: Raleway;
+                font-size: 20px;
+                color: #bc7140;
+                padding-top: 40px;
+                float: right;
+                text-decoration-color: #bc7140;
+                color:#bc7140;
+            }
+            a{
+                text-decoration-line: none;
+                text-decoration-color: #bc7140;
+                color:#bc7140;
+                padding-right: 40px;
+            }
+           
+            #slogan{
+                font-family: Raleway;
+                font-size: 30px;
+                color: #bc7140;
+                text-align: center;
+                font-weight: 200;
+            }
+            
+            #california{
+                margin-top: 0%;
+                float: left;
+                width: 60%;
+                height: auto;
+                margin-left: 1%;
+            }
+
+input[type=text], input[type=password] {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #f55b35;
+  color: black;
+  font-family: Raleway;
+    font-size: 18px;
+  padding: 12px 20px;
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+        #login{
+            padding: 16px;
+        }
+        
+        #signUp{
+            padding: 16px;
+        }
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor:grabbing;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+        
+        #button{
+            border: none;
+            color: black;
+            text-align: center;
+            text-decoration:none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    
+    </style>
+    <body>
+        <div id = "titleBox">
+                
+                <div class="topnav">
+                    <a href="Home.html">Home</a>
+				    <a href="AboutUs.html">About Us</a>
+                    <a href="Covid-19 Info.html">COVID-19</a>
+ 			        <a href="County.html">California Counties</a>
+                </div>
+                <div class = "heading">
+                    <h1>COVID-19 Website</h1> 
+                </div>
+            </div>
+            
+            <div id = "slogan">
+                <p>"Connect With Your California County Mates"</p> 
+            </div>
+            <div id = "california">
+                <img src = "https://www.theancestorhunt.com/uploads/1/2/9/1/12914878/9006604_orig.png">
+            </div>
+       
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Login</h1>
+      <p >Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Login</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1 id = "signUp">Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+        <div id = "button">
+            
+            <a href = "https://www.kinf.org/donate/" target="_blank"><button>Donate</button></a>
+        </div>
+        </body>
+        
+        <script>
+            
+            function Login() {
+                document.getElementById("demo").innerHTML = "Hello World"
+            }
+            // Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+        </script>
+    </head>
+</html>
